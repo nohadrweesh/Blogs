@@ -38,4 +38,8 @@ class User extends Authenticatable
     public function isActive(){
         return $this->role->is_active==0;
     }
+
+    public function posts(){
+        return $this->hasMany('App\Post');
+    }
 }
